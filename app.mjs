@@ -3,11 +3,16 @@ import * as process from 'process';
 import * as dotenv from 'dotenv';
 // Load environment variables from .env file
 dotenv.config();
+
+
 // Shopify API configurations using environment variables
 const SHOPIFY_API_URL = process.env.SHOPIFY_API_URL || '';
 const SHOPIFY_ADMIN_TOKEN = process.env.SHOPIFY_ADMIN_TOKEN || '';
 const SHOPIFY_STOREFRONT_API_URL = process.env.SHOPIFY_STOREFRONT_API_URL || '';
 const SHOPIFY_STOREFRONT_TOKEN = process.env.SHOPIFY_STOREFRONT_TOKEN || '';
+
+
+
 // Function to fetch product IDs by name from Admin API
 async function fetchProductIDsByName(productName) {
     const query = `
@@ -68,6 +73,9 @@ async function fetchVariantsByProductID(productID) {
         return null;
     }
 }
+
+
+
 // Function to sort and print variants by price
 function displayProductVariants(products) {
     const variantsList = [];
@@ -87,6 +95,10 @@ function displayProductVariants(products) {
         console.log(`${variant.title} - variant ${variant.variant} - price $${variant.price.toFixed(2)}`);
     });
 }
+
+
+
+
 // Main function to handle input and output
 async function main() {
     // Get the product name from command line arguments
@@ -120,5 +132,8 @@ async function main() {
         console.log(`No variants found for products with the name: ${productName}`);
     }
 }
+
+
+
 // Run the main function
 main();

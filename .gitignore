@@ -1,0 +1,33 @@
+# Node modules
+node_modules/
+
+# Build output
+build/
+
+# Environment variables
+.env
+
+# Logs
+logs/
+*.log
+
+# IDE specific files
+.idea/
+.vscode/
+
+# Temporary files
+tmp/
+temp/
+
+# OS specific files
+.DS_Store
+Thumbs.db
+
+# NPM packages
+package-lock.json
+yarn.lock
+
+# TypeScript build files
+*.tsbuildinfo
+
+# Exclude any other specific files you don't want to track

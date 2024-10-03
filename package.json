@@ -1,0 +1,21 @@
+{
+  "name": "test-assignment",
+  "version": "1.0.0",
+  "description": "reate a script (eg: app.js) that communicates with Shopify through Shopify’s graphql APIs. It takes input product names and fetches the appropriate products that match the name and list down the variants sorting by price.",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^1.7.7",
+    "dotenv": "^16.4.5"
+  },
+  "devDependencies": {
+    "@types/node": "^22.7.4",
+    "typescript": "^5.6.2"
+  }
+}

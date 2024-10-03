@@ -28,7 +28,6 @@ async function fetchProductIDsByName(productName) {
                 'X-Shopify-Access-Token': SHOPIFY_ADMIN_TOKEN,
             },
         });
-        console.log('API Response:', response.data); // Add this line to debug
         return response.data.data.products.edges;
     }
     catch (error) {
@@ -85,7 +84,7 @@ function displayProductVariants(products) {
     variantsList.sort((a, b) => a.price - b.price);
     // Display sorted variants
     variantsList.forEach((variant) => {
-        console.log(`${variant.title} - ${variant.variant} - price $${variant.price.toFixed(2)}`);
+        console.log(`${variant.title} - variant ${variant.variant} - price $${variant.price.toFixed(2)}`);
     });
 }
 // Main function to handle input and output
